@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./common/_head') %>
+  <body>
+    <%- include('./common/_header') %>
+      <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
+
+
+    <% for (let i=0; i < 4; i++) { %>
+      <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
+      <% } %>
+
+      <%- include('./common/_footer') %>
+  </body>
+</html>
