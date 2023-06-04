@@ -1,4 +1,7 @@
+@use 'global' as *;
+@use 'sass:math';
+
 .l-mv {
 	width: 100%;
-	height: calc(100vh - #{rem(100)});
+	height: calc(100vh - #{rem(200)});
 }
