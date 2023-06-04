@@ -1,0 +1,18 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-flipbox {
+	width: 100%;
+	height: 100%;
+}
+
+.p-flipbox .side {
+	height: inherit;
+}
+
+.p-flipbox .side img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

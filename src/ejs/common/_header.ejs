@@ -1,5 +1,39 @@
+<%
+navItems = [
+    {
+      link: '#',
+      text: 'news',
+    },
+    {
+      href: '#',
+      text: 'about',
+    },
+    {
+      link: '#',
+      text: 'works',
+    },
+    {
+      href: '#',
+      text: 'contact',
+    },
+  ];
+%>
 <div class="l-header p-header">
-  <div class="p-header__inner l-inner">
-    header
-  </div>
+	<div class="p-header__inner l-inner">
+		<h1 class="p-header__logo">
+			<a href="#">logo</a>
+		</h1>
+
+		<button class="p-header__menu-button c-menu-botton"></button>
+    
+		<nav class="p-header__nav">
+			<ul class="p-header__nav-items">
+        <% navItems.forEach(function(navItem, i) { %>
+				<li class="p-header__nav-item">
+					<a href="<%= navItem.href %>"><%= navItem.text %></a>
+				</li>
+        <% }); %>
+			</ul>
+		</nav>
+	</div>
 </div>

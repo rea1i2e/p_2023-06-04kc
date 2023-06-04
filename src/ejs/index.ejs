@@ -1,15 +1,44 @@
+<% const rootPath = './'; %>
+
 <!DOCTYPE html>
 <html lang="ja">
 <%- include('./common/_head') %>
-  <body>
-    <%- include('./common/_header') %>
-      <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
 
+<body>
+	<%- include('./common/_header') %>
 
-    <% for (let i=0; i < 4; i++) { %>
-      <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
-      <% } %>
+	<%
+slideItems = [
+    {
+      src: 'https://rea1i2e.github.io/sample-images/images/picture01.jpg',
+      alt: '画像1のalt',
+    },
+    {
+      src: 'https://rea1i2e.github.io/sample-images/images/picture02.jpg',
+      alt: '画像2のalt',
+    },
+    {
+      src: 'https://rea1i2e.github.io/sample-images/images/picture03.jpg',
+      alt: '画像3のalt',
+    },
+    {
+      src: 'https://rea1i2e.github.io/sample-images/images/picture04.jpg',
+      alt: '画像4のalt',
+    },
+    {
+      src: 'https://rea1i2e.github.io/sample-images/images/picture05.jpg',
+      alt: '画像5のalt',
+    },
+    {
+      src: 'https://rea1i2e.github.io/sample-images/images/picture06.jpg',
+      alt: '画像6のalt',
+    },
+];
+%>
+	<div class="l-mv">
+		<%- include(`${rootPath}component/_p-flipbox`, { slideItems: slideItems }) %>
+	</div>
 
-      <%- include('./common/_footer') %>
-  </body>
+</body>
+
 </html>
